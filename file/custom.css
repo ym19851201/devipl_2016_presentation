@@ -1,0 +1,71 @@
+* {
+  font-family: 'Ricty for PowerLine','メイリオ';
+  font-size: 95%;
+}
+
+.aa {
+  font-family: 'IPAMonaPGothic','IPAMonaGothic','ＭＳ Ｐゴシック';
+  font-size: 45px;
+}
+
+/*.txt {*/
+/*  text-align: left;*/
+/*  font-size: 22px;*/
+/*  margin-left: 20%;*/
+/*  margin-right: 20%;*/
+/*  background-color: rgba(240, 240, 0, 0.3);*/
+/*  border-style: solid;*/
+/*  border-width: 1px;*/
+/*  border-color: rgba(180, 180, 0, 0.6);*/
+
+/*}*/
+
+img {
+  height: 40%;
+  width: 40%;
+}
+
+.large {
+  font-size: 145px;
+  text-align: center;
+}
+
+blockquote::before {
+  color: #ccf0f0;
+  content: "“";
+  font-size: 5em;
+  left: 0;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+blockquote::after {
+  border-radius: 10px / 100px;
+  bottom: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 50%;
+  top: 10px;
+  z-index: -2;
+}
+
+blockquote {
+  border-radius: 5px;
+}
+blockquote {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #cde;
+  color: #000;
+  font-family: "Hoefler Text",Constantia,Palatino,"Palatino Linotype","Book Antiqua",Georgia,serif;
+  font-size: 2em;
+  padding: 1em 2em 0.5em;
+  position: relative;
+  z-index: auto;
+}
+.deck-container p, .deck-container blockquote, .deck-container iframe, .deck-container img, .deck-container ul, .deck-container ol, .deck-container pre, .deck-container video {
+  margin-bottom: 1em;
+}

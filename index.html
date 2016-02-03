@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>DevIPL 2016 Winter</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+
+  
+
+  <link rel="stylesheet" type="text/css" href=".//css/fg.menu.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href=".//css/theme/ui.all.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href=".//css/highlight/default.css"  />
+
+  <link rel="stylesheet" type="text/css" href=".//css/showoff.css" />
+  <link rel="stylesheet" type="text/css" href=".//css/font-awesome-4.4.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" src=".//js/jquery-2.1.4.min.js"></script>
+
+  <script type="text/javascript" src=".//js/jquery.cycle.all.js"></script>
+  <script type="text/javascript" src=".//js/jquery-print.js"></script>
+  <script type="text/javascript" src=".//js/jquery.batchImageLoad.js"></script>
+  <script type="text/javascript" src=".//js/jquery.parsequery.min.js"></script>
+  <script type="text/javascript" src=".//js/jquery.doubletap-0.1.js"></script>
+  <script type="text/javascript" src=".//js/fg.menu.js"></script>
+  <script type="text/javascript" src=".//js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src=".//js/highlight.pack.js"></script>
+
+  <script type="text/javascript" src=".//js/coffee-script.js"></script>
+
+  <script type="text/javascript" src=".//js/showoff.js"></script>
+
+  
+    
+    <link rel="stylesheet" href=".//file/custom.css" type="text/css"/>
+  
+
+  
+
+  <script type="text/javascript">
+    $(function(){
+      setupPreso(false, './');
+    });
+
+    editUrl  = "";
+
+    keymap = {
+  "space": "NEXT",
+  "d": "DEBUG",
+  "up": "PREV",
+  "left": "PREV",
+  "pageup": "PREV",
+  "down": "NEXT",
+  "right": "NEXT",
+  "pagedown": "NEXT",
+  "r": "RELOAD",
+  "c": "CONTENTS",
+  "t": "CONTENTS",
+  "h": "HELP",
+  "/": "HELP",
+  "?": "HELP",
+  "b": "BLANK",
+  ".": "BLANK",
+  "F": "FOOTER",
+  "f": "FOLLOW",
+  "n": "NOTES",
+  "esc": "CLEAR",
+  "p": "PAUSE",
+  "P": "PRESHOW",
+  "x": "EXECUTE",
+  "f5": "EXECUTE"
+};
+  </script>
+
+</head>
+
+<body>
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+
+<div id="help">
+  <h1>Showoff Hotkeys</h1>
+  <div>
+    <span class="description">Move to the next slide.</span>
+    <span class="action">NEXT</span>
+    <span class="hotkeys"><span class="key">space</span><span class="key">down</span><span class="key">right</span><span class="key">pagedown</span></span>
+  </div>
+  <div>
+    <span class="description">Move to the previous slide.</span>
+    <span class="action">PREV</span>
+    <span class="hotkeys"><span class="key">up</span><span class="key">left</span><span class="key">pageup</span></span>
+  </div>
+  <div>
+    <span class="description">Show the table of contents menu.</span>
+    <span class="action">CONTENTS</span>
+    <span class="hotkeys"><span class="key">c</span><span class="key">t</span></span>
+  </div>
+  <div>
+    <span class="description">Toggle follow mode.</span>
+    <span class="action">FOLLOW</span>
+    <span class="hotkeys"><span class="key">f</span></span>
+  </div>
+  <div>
+    <span class="description">Show this help dialog.</span>
+    <span class="action">HELP</span>
+    <span class="hotkeys"><span class="key">h</span><span class="key">/</span><span class="key">?</span></span>
+  </div>
+
+  <hr />
+
+  <div>
+    <span class="description">Reload all slides.</span>
+    <span class="action">RELOAD</span>
+    <span class="hotkeys"><span class="key">r</span></span>
+  </div>
+  <div>
+    <span class="description">Blank the screen.</span>
+    <span class="action">BLANK</span>
+    <span class="hotkeys"><span class="key">b</span><span class="key">.</span></span>
+  </div>
+  <div>
+    <span class="description">Toggle the display footer.</span>
+    <span class="action">FOOTER</span>
+    <span class="hotkeys"><span class="key">F</span></span>
+  </div>
+  <div>
+    <span class="description">Toggle notes display.</span>
+    <span class="action">NOTES</span>
+    <span class="hotkeys"><span class="key">n</span></span>
+  </div>
+  <div>
+    <span class="description">Clear code execution results.</span>
+    <span class="action">CLEAR</span>
+    <span class="hotkeys"><span class="key">esc</span></span>
+  </div>
+  <div>
+    <span class="description">Pause the presentation.</span>
+    <span class="action">PAUSE</span>
+    <span class="hotkeys"><span class="key">p</span></span>
+  </div>
+  <div>
+    <span class="description">Display slideshow of <tt>preshow</tt> images on a timer.</span>
+    <span class="action">PRESHOW</span>
+    <span class="hotkeys"><span class="key">P</span></span>
+  </div>
+  <div>
+    <span class="description">Execute the first visible code block.</span>
+    <span class="action">EXECUTE</span>
+    <span class="hotkeys"><span class="key">x</span><span class="key">f5</span></span>
+  </div>
+
+  <hr />
+
+  <div>
+    <span class="description">Show debugging information.</span>
+    <span class="action">DEBUG</span>
+    <span class="hotkeys"><span class="key">d</span></span>
+  </div>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso"><center>loading presentation...</center></div>
+<div id="footer">
+  <span id="followMode"></span>
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+  <span id="slideFilename"></span>
+  <img id="disconnected" src=".//css/disconnected.png" />
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div id="one_01_slide1" class="slide subsection smaller" data-transition="none">
+<div class="content subsection smaller" ref="one/01_slide/1">
+<h1>注意書き</h1>
+
+<p><img src="http://www.kaoriya.net/blog/2013/12/06/06.png" alt="Vim"></p>
+
+<ul>
+<li>今回発表する内容に、目新しい技術・トピックはありません。</li>
+<li>Vimいいよね。Eclipseも素晴らしいけど、せっかく一人で開発してるし、脱IDEを図りたいよね。</li>
+<li>って内容です。</li>
+<li>一応このスライドは<a href="http://192.168.5.20:9090/" target="_blank">http://192.168.5.20:9090/</a> で見れます。(上下でスライド送り、hでヘルプ)</li>
+</ul>
+</div>
+</div>
+<div id="one_01_slide2" class="slide subsection" data-transition="none">
+<div class="content subsection" ref="one/01_slide/2">
+<h1>今さらのUnite.vim</h1>
+</div>
+</div>
+<div id="one_01_slide3" class="slide subsection" data-transition="none">
+<div class="content subsection" ref="one/01_slide/3">
+<h1>っていうかVimって？</h1>
+</div>
+</div>
+<div id="one_01_slide4" class="slide " data-transition="none">
+<div class="content " ref="one/01_slide/4">
+<blockquote>
+<p>Vim（ヴィムまたはヴィアイエム）は、vi から派生し、発展した高機能なテキストエディタである。<br>
+VimはGUIを必要とせずCUIでも動くため、Unix系OSに標準のエディタとして搭載されていることが多い。<br>
+viエディタと同様、キーボードのみで操作されることを前提としていたため、キーボードのみですべての操作が可能になっている。<br>
+<a href="https://ja.wikipedia.org/wiki/Vim" target="_blank">(Wikipediaより)</a></p>
+</blockquote>
+
+<h2>つまり SO COOL!!!</h2>
+</div>
+</div>
+<div id="one_01_slide5" class="slide " data-transition="none">
+<div class="content " ref="one/01_slide/5">
+<ul>
+<li>高いテキスト編集能力</li>
+<li>やっぱりカーソル移動って言ったらhjklだよねー</li>
+<li>マウス(笑)</li>
+<li>
+<strong>プラグイン</strong>による拡張</li>
+</ul>
+</div>
+</div>
+<div id="one_01_slide6" class="slide subsection" data-transition="none">
+<div class="content subsection" ref="one/01_slide/6">
+<h1>Unite.vimって？</h1>
+</div>
+</div>
+<div id="one_01_slide7" class="slide center" data-transition="none">
+<div class="content center" ref="one/01_slide/7">
+<ul>
+<li>
+<p>こんなこというひとがつくった超有名Vimﾌﾟﾗｷﾞﾝ</p>
+
+<p><img src="https://i.gyazo.com/e10a9afb97df35787325b43840eaa83b.png" alt="Shougo"></p>
+</li>
+</ul>
+</div>
+</div>
+<div id="one_01_slide8" class="slide bullets incremental" data-transition="none">
+<div class="content bullets incremental" ref="one/01_slide/8">
+<ul>
+<li>vim 用の統合ユーザインターフェース。様々なデータを共通のインタフェースを用いて操作できる。</li>
+<li>source(file等)を選択後、候補を絞り込み、actionを選択する。
+
+<ul>
+<li>:Unite &lt;source&gt;</li>
+</ul>
+</li>
+<li>:Unite file bufferとか打ち込むと何ができるわかるかも。</li>
+<li>自分で拡張できる。</li>
+<li>とはいえ意味わかんないですよね。</li>
+</ul>
+</div>
+</div>
+<div id="one_01_slide9" class="slide " data-transition="none">
+<div class="content " ref="one/01_slide/9">
+<h1>多分わかりやすい例</h1>
+</div>
+</div>
+<div id="one_01_slide10" class="slide smaller" data-transition="none">
+<div class="content smaller" ref="one/01_slide/10">
+<h2>supermomonga/jazzradio.vim</h2>
+
+<p><img src="https://i.gyazo.com/a277ed94128b18122cf3fdbbeda4cfea.png" alt="momonnga"></p>
+
+<p>Vimで<a href="http://www.jazzradio.com/" target="_blank">JAZZRADIO.COM</a>にある曲を聞こうというマジ○チプラグイン。<br>
+mplayerに依存しているので試したい方は  </p>
+
+<pre><code>$sudo apt-get install -y mplayer  
+$brew install mplayer  
+</code></pre>
+
+<p>などのあと、.vimrcに</p>
+
+<pre class="highlight"><code class="language-vim">NeoBundle 'supermomonga/jazzradio.vim'</code></pre>
+
+<p>など追記してください  </p>
+</div>
+</div>
+<div id="one_01_slide11" class="slide small" data-transition="none">
+<div class="content small" ref="one/01_slide/11">
+<ul>
+<li>インストールするとsourceにjazzradioが追加される。</li>
+<li>:Unite jazzradioと打ち込むとチャンネル一覧が表示される。
+<img src="https://i.gyazo.com/33cd4f6d02659ab2807888195dab2700.png" alt="jazzradio">
+</li>
+<li>今日はボサノヴァの気分♪ ってときには適当に"bossa"とか打ち込むと該当するチャンネルが絞り込まれる。</li>
+<li>前述したactionに何も選択しないとsourceデフォルトのaction(jazzradioの場合はplayというsource独自のaction)が選択される。</li>
+<li>目標(好きなチャンネル)をセンター(カーソル)に入れてスイッチ(エンター)</li>
+<li>選択したチャンネルで放送中の曲が聞ける！！</li>
+</ul>
+</div>
+</div>
+<div id="one_01_slide12" class="slide subsection" data-transition="none">
+<div class="content subsection" ref="one/01_slide/12">
+<h1>つまり</h1>
+
+<ul>
+<li>:Unite &lt;source&gt;で候補リストを表示
+
+<ul>
+<li>sourceは候補リストを作成</li>
+</ul>
+</li>
+<li>絞り込み(sourceによっては複数選択可)</li>
+<li>actionを選択
+
+<ul>
+<li>独自拡張にはsourceに紐付いた専用actionが用意されていることが多いが、echoなど汎用actionも</li>
+</ul>
+</li>
+</ul>
+
+<h2>sourceの役割 ≒  候補リスト作成 &amp; action定義</h2>
+
+<h2>→ 定義さえすれば同一インターフェイスで様々なことができる</h2>
+</div>
+</div>
+<div id="one_01_slide13" class="slide subsection" data-transition="none">
+<div class="content subsection" ref="one/01_slide/13">
+<h1>なぜ今Unite.vimなのか？</h1>
+</div>
+</div>
+<div id="one_01_slide14" class="slide center" data-transition="none">
+<div class="content center" ref="one/01_slide/14">
+<ul>
+<li>ちょっとVimでJava書きたくて
+
+<ul>
+<li>ちょっとJavaのインポート補完したくて
+
+<ul>
+<li>ちょっとEclim(Eclipseの機能Vimから呼び出すプラグイン)使ったら負けな気がして</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="aa">
+            ＿人人人人人人人人人人人＿<br>
+            ＞  ごくごく自然な流れ  ＜<br>
+            ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
+</div>
+</div>
+</div>
+<div id="one_01_slide15" class="slide subsection" data-transition="none">
+<div class="content subsection" ref="one/01_slide/15">
+<h1>ということでUnite.vimのsource自作</h1>
+</div>
+</div>
+<div id="one_01_slide16" class="slide " data-transition="none">
+<div class="content " ref="one/01_slide/16">
+<h2>細かいことは置いといてとりあえずの目標</h2>
+
+<ul>
+<li>ソースフォルダ下にある*.javaファイル名を全て取得</li>
+<li>依存ライブラリのjarファイルに含まれる*.classを全て取得</li>
+<li>rt.jarに含まれる*.classを全て取得</li>
+<li>上記3つを候補として絞り込み可能とし、エンターキーｯﾀｰｰｰﾝでimport aaa.bbb.ccc.DDD;が適切な位置に埋め込まれるようにする</li>
+</ul>
+</div>
+</div>
+<div id="one_01_slide17" class="slide bullets incremental" data-transition="none">
+<div class="content bullets incremental" ref="one/01_slide/17">
+<ul>
+<li>上記をVim Scriptで書きます。</li>
+<li>上記をVim Scriptで書きます。</li>
+<li>上記をVim Scriptで書きます。</li>
+<li>上記をVim Scriptで書きます。</li>
+</ul>
+</div>
+</div>
+<div id="one_01_slide18" class="slide subsection" data-transition="none">
+<div class="content subsection" ref="one/01_slide/18">
+<h1>できた</h1>
+
+<p>githubに<a href="https://github.com/ym19851201/java_import" target="_blank">こんなん</a>置いときました。  </p>
+
+<p>以下のような問題も残っているものの、まあ使えないこともないです。<br>
+(もうちょい作りこもうと思いますが)</p>
+
+<ul>
+<li>Vim Scriptに対する理解の浅さ</li>
+<li>Vimプラグインに対する理解の浅さ</li>
+<li>Unite.vimに対する理解の浅さ</li>
+<li>Macだと挙動が怪しい</li>
+</ul>
+</div>
+</div>
+<div id="one_01_slide19" class="slide subsection" data-transition="none">
+<div class="content subsection" ref="one/01_slide/19">
+<h1>おまけ</h1>
+</div>
+</div>
+<div id="one_01_slide20" class="slide " data-transition="none">
+<div class="content " ref="one/01_slide/20">
+<h2>Uniteのsourceに'Unite-script'っていうのがあります</h2>
+
+<ul>
+<li>元々Unite.vimの一拡張だったが、本体に取り込まれた</li>
+<li>好きなスクリプトでUnite.vimのsource書けるっぽい</li>
+<li>もうVim Scriptなんて書かないでいいんだ！</li>
+<li>"Uniteに表示する文字列\tVimに実行させたいコマンド"という文字列を標準出力すればいい模様</li>
+</ul>
+
+<h1>楽(確信)</h1>
+</div>
+</div>
+<div id="one_01_slide21" class="slide " data-transition="fade">
+<div class="content " ref="one/01_slide/21">
+<h1>Vim(このチカラ)がそんな簡単にみんなを幸せにすると思う？</h1>
+</div>
+</div>
+<div id="one_01_slide22" class="slide " data-transition="none">
+<div class="content " ref="one/01_slide/22">
+<h3>"<strong>Vim</strong>に実行させたいコマンド"</h3>
+
+<h2>"<strong>Vim</strong>に実行させたいコマンド"</h2>
+
+<h1>"<strong>Vim</strong>に実行させたいコマンド"</h1>
+
+<div class="large">
+"Vimに実行させたいコマンド"
+</div>
+</div>
+</div>
+<div id="one_01_slide23" class="slide " data-transition="none">
+<div class="content " ref="one/01_slide/23">
+<ul>
+<li>
+<strike>もうVim Scriptなんて書かないでいいんだ！</strike>嘘でした</li>
+<li>候補のリスト作るのは楽なのでシステムコールしてブラウザ開いたりするといいかもしれないですね</li>
+<li>Vimのバッファに何か表示させるのでもいいかも</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="pauseScreen">
+  PAUSED
+</div>
+
+</body>
+</html>
